@@ -417,11 +417,6 @@ server <- function(input, output) {
     load("data/Strikezone_Polys.rda")
     load("data/zone_poly_setup.rda")
     
-    # x <- c(0, 0)
-    # z <- c(0, 400)
-    # 
-    # cf <- data_frame(x, z)
-    # 
     geom_baseball("NCAA", xlims = c(-250,250), ylims = c(0,450), 
                   color_updates = list(plot_background = "#b2dfdb", infield_dirt = "#eeeeee",
                                        infield_grass = "#b2dfdb", pitchers_mound = "#eeeeee", 
@@ -430,7 +425,6 @@ server <- function(input, output) {
                                        foul_line = "#000000", running_lane = "#000000")) +
       geom_point(data_1() %>% filter(!is.na(PlayResult), !PlayResult %in% c("Walk", "Strikeout")),
                  mapping = aes(hit_x, hit_y, fill = PlayResult), shape = 21, size = 5) +
-      # geom_path(cf, mapping = aes(x, z)) +
       scale_fill_manual(values = result_colors) +
       geom_arc(aes(x0 = 0, y0 = 118, r = 259, start = 5.15 - 2*pi, end = 1.15),
                color="#000000", linewidth =.125, alpha = .5) +
