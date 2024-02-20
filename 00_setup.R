@@ -228,4 +228,3 @@ save(home_plate, sz, sz_2, sz_3, kzone_11, kzone_12, kzone_13, kzone_14,
      SZ_SpatialPoly_14,
      
      file = "data/app_setup.rda")
-

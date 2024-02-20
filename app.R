@@ -24,8 +24,7 @@ ui <- page_sidebar(
   title = "DS8 Analytics",
   sidebar = sidebar(open = "always",
     helpText("Upload one or multiple TrackMan .csv files and produce hitting visuals for various types of inputs"),
-    # fileInput("upload_1", buttonLabel = "Upload...",
-    #           label = "Upload TrackMan .csv", accept = c(".csv"), multiple = TRUE),
+
     fileInput("upload_1", buttonLabel = "Upload...",
               label = NULL, accept = c(".csv"), multiple = TRUE),
     
