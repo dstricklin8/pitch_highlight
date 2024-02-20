@@ -229,28 +229,3 @@ save(home_plate, sz, sz_2, sz_3, kzone_11, kzone_12, kzone_13, kzone_14,
      
      file = "data/app_setup.rda")
 
-
-
-
-library(readr)
-library(tidymodels)
-season <- read_csv("data/23_season.csv")
-
-set.seed(6432)
-
-split <- season %>% 
-  initial_split(prop = .5)
-
-season_a <- training(split)
-season_b <- testing(split)
-
-write_csv(season_a, file = "data/season_a.csv")
-write_csv(season_b, file = "data/season_b.csv")
-
-season_a <- read_csv("data/season_a.cvs")
-
-
-
-
-
-
