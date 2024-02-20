@@ -35,7 +35,6 @@ data_setup <- function(input) {
       PitchCall = factor(PitchCall, levels = c("BallCalled", "BallinDirt", "BallIntentional", "InPlay",
                                              "StrikeCalled", "FoulBall", "StrikeSwinging", "HitByPitch")),
     
-      # Contact Type taken from [Tom Tango](http://tangotiger.com/index.php/site/comments/statcast-lab-barrels#37)
     contact_type = case_when(
       ExitSpeed * 1.5 - Angle >= 117 &
         ExitSpeed + Angle >= 124 &
